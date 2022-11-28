@@ -1,6 +1,26 @@
 .results-box {
-  height: 620px;
+  height: 700px;
   width: 70%;
+}
+.info-box {
   border: solid 2px #30363d;
   border-radius: 8px;
+  width: 30%;
+}
+.bigger {
+  display: flex;
+  height: 90%;
+}
+
+.pic-box {
+  width: 70%;
+
+  border: solid 2px #30363d;
+  border-radius: 8px;
+}
+.search-box {
+  margin-top: 10px;
+  border: solid 2px #30363d;
+  border-radius: 8px;
+  height: 10%;
 }

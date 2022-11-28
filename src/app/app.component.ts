@@ -9,13 +9,5 @@ import { ApiService } from './api.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  countryData: any = null;
-  constructor(private api: ApiService) {}
-  ngOnInit() {
-    this.api.getCountries().subscribe((data) => {
-      this.countryData = data;
-    });
-  }
-
   title = 'discrr-app';
 }
