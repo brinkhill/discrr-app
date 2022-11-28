@@ -1,9 +1,27 @@
-p {
+.brinkley-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #58a6ff;
 }
 
-a {
+.brinkley-link a {
   border-bottom: 1px dotted #58a6ff;
   text-decoration: none;
   color: #58a6ff;
+}
+
+.discit-link {
+  font-size: small;
+  color: #1e3754;
+  margin-top: -25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.discit-link a {
+  border-bottom: 1px dotted #1e3754;
+  text-decoration: none;
+  color: #1e3754;
 }

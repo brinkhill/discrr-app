@@ -1,6 +1,12 @@
 <app-header></app-header>
 <app-results></app-results>
 <app-search></app-search>
+
+<p>
+  <app-results *ngFor="let country of countryData" app-data [country]="country">
+  </app-results>
+</p>
+
 <app-footer></app-footer>
 
 <router-outlet></router-outlet>
