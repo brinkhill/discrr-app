@@ -1,0 +1,9 @@
+p {
+  color: #58a6ff;
+}
+
+a {
+  border-bottom: 1px dotted #58a6ff;
+  text-decoration: none;
+  color: #58a6ff;
+}
