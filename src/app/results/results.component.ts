@@ -9,12 +9,13 @@ import { ApiService } from '../api.service';
   styleUrls: ['./results.component.css'],
 })
 export class ResultsComponent {
+  discName: string = '';
   constructor(private http: HttpClient) {}
   response: any;
   skeleton: boolean = true;
   public search() {
     this.http
-      .get('https://discitapi.herokuapp.com/disc')
+      .get('https://discitapi.herokuapp.com/disc/name/' + this.discName)
       .subscribe((response) => {
         this.response = [];
         this.response = response;

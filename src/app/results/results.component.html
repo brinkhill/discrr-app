@@ -1,27 +1,52 @@
 <div class="results-box">
   <div class="bigger">
     <div class="info-box">
-      <h3 *ngIf="!skeleton">{{ response[12].name }}</h3>
-      <h3 *ngIf="skeleton">Disc Name</h3>
+      <p *ngIf="!skeleton" class="disc-brand">{{ response[0].brand }}</p>
+      <p *ngIf="skeleton" class="disc-brand">Brand</p>
 
-      <p *ngIf="!skeleton">{{ response[12].brand }}</p>
-      <p *ngIf="skeleton">Brand</p>
+      <h3 *ngIf="!skeleton" class="disc-name">{{ response[0].name }}</h3>
+      <h3 *ngIf="skeleton" class="disc-name">Disc Name</h3>
 
-      <p *ngIf="!skeleton">{{ response[12].category }}</p>
-      <p *ngIf="skeleton">Brand</p>
+      <h4 *ngIf="!skeleton" class="disc-category">
+        {{ response[0].category }}
+      </h4>
+      <h4 *ngIf="skeleton" class="disc-category">Category</h4>
+      <p *ngIf="!skeleton" class="disc-stats">
+        Speed: {{ response[0]?.speed }}
+      </p>
+      <p *ngIf="skeleton" class="disc-stats">Speed:</p>
+      <p *ngIf="!skeleton" class="disc-stats">Glide: {{ response[0].glide }}</p>
+      <p *ngIf="skeleton" class="disc-stats">Glide:</p>
+      <p *ngIf="!skeleton" class="disc-stats">Turn: {{ response[0].turn }}</p>
+      <p *ngIf="skeleton" class="disc-stats">Turn:</p>
+      <p *ngIf="!skeleton" class="disc-stats">Fade: {{ response[0].fade }}</p>
+      <p *ngIf="skeleton" class="disc-stats">Fade:</p>
+      <p *ngIf="!skeleton" class="disc-stats">
+        Stability: {{ response[0].stability }}
+      </p>
+      <p *ngIf="skeleton" class="disc-stats">Stability:</p>
     </div>
-    <div class="pic-box">
-      <div *ngIf="!skeleton">
-        <img
-          src="{{ response[12].pic }}"
-          alt="Girl in a jacket"
-          width="500"
-          height="600"
-        />
+    <div class="display-box">
+      <div class="top-box">
+        <div class="flight-box">
+          <img
+            *ngIf="!skeleton"
+            class="flight-path"
+            src="{{ response[0].pic }}"
+            style="width: 100%; height: 100%"
+          />
+          <img *ngIf="skeleton" class="flight-path" />
+        </div>
+        <div class="photo"></div>
       </div>
-      <div *ngIf="skeleton" class="picture">PICTURE</div>
-      {{ response[12].color }}
+      <div class="bottom-box"></div>
     </div>
   </div>
-  <div class="search-box"><button (click)="search()">Search</button></div>
+  <div class="search-box">
+    <input
+      type="text"
+      placeholder="Search for a disc"
+      [(ngModel)]="discName"
+    /><button (click)="search()">Search</button>
+  </div>
 </div>
