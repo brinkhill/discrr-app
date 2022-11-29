@@ -13,6 +13,7 @@ export class ResultsComponent {
   constructor(private http: HttpClient) {}
   response: any;
   skeleton: boolean = true;
+  fdLink: string = '';
   public search() {
     this.http
       .get('https://discitapi.herokuapp.com/disc/name/' + this.discName)
@@ -21,6 +22,9 @@ export class ResultsComponent {
         this.response = response;
         console.log(this.response);
         this.skeleton = false;
+        this.fdLink =
+          'https://foundationdiscs.com/collections/discraft/products/' +
+          this.response[0].name;
       });
   }
 }

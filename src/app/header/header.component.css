@@ -18,11 +18,11 @@ h2 {
 @media (max-width: 479px) {
   h1 {
     display: block;
-    padding-left: 25px;
+    padding-left: 10px;
   }
   h2 {
     display: block;
-    padding-left: 25px;
+    padding-left: 10px;
   }
   .login-button {
     display: flex;
