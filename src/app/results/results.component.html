@@ -11,20 +11,61 @@
         {{ response[0].category }}
       </h4>
       <h4 *ngIf="skeleton" class="disc-category">Category</h4>
-      <p *ngIf="!skeleton" class="disc-stats">
-        Speed: {{ response[0]?.speed }}
-      </p>
-      <p *ngIf="skeleton" class="disc-stats">Speed:</p>
-      <p *ngIf="!skeleton" class="disc-stats">Glide: {{ response[0].glide }}</p>
-      <p *ngIf="skeleton" class="disc-stats">Glide:</p>
-      <p *ngIf="!skeleton" class="disc-stats">Turn: {{ response[0].turn }}</p>
-      <p *ngIf="skeleton" class="disc-stats">Turn:</p>
-      <p *ngIf="!skeleton" class="disc-stats">Fade: {{ response[0].fade }}</p>
-      <p *ngIf="skeleton" class="disc-stats">Fade:</p>
-      <p *ngIf="!skeleton" class="disc-stats">
-        Stability: {{ response[0].stability }}
-      </p>
-      <p *ngIf="skeleton" class="disc-stats">Stability:</p>
+      <div class="stats">
+        <div class="stat">
+          <div *ngIf="!skeleton">
+            <p class="title">Speed:</p>
+            <p class="number">{{ response[0]?.speed }}</p>
+          </div>
+          <div *ngIf="skeleton">
+            <p class="title">Speed:</p>
+            <p class="number">0</p>
+          </div>
+        </div>
+        <div class="stat">
+          <div *ngIf="!skeleton">
+            <p class="title">Glide:</p>
+            <p class="number">{{ response[0].glide }}</p>
+          </div>
+          <div *ngIf="skeleton">
+            <p class="title">Glide:</p>
+            <p class="number">0</p>
+          </div>
+        </div>
+        <div class="stat">
+          <div *ngIf="!skeleton">
+            <p class="title">Turn:</p>
+            <p class="number">{{ response[0].turn }}</p>
+          </div>
+          <div *ngIf="skeleton">
+            <p class="title">Turn:</p>
+            <p class="number">0</p>
+          </div>
+        </div>
+        <div class="stat">
+          <div *ngIf="!skeleton">
+            <p class="title">Fade:</p>
+            <p class="number">{{ response[0].fade }}</p>
+          </div>
+          <div *ngIf="skeleton">
+            <p class="title">Fade:</p>
+            <p class="number">0</p>
+          </div>
+        </div>
+      </div>
+      <div class="stabilty">
+        <p *ngIf="!skeleton">Stability: {{ response[0].stability }}</p>
+        <p *ngIf="skeleton">Stability: Unknown</p>
+      </div>
+      <div class="mobile-display-box">
+        <img
+          *ngIf="!skeleton"
+          class="flight-path"
+          src="{{ response[0].pic }}"
+          style="width: 100%; height: 100%"
+        />
+        <img *ngIf="skeleton" class="flight-path" />
+      </div>
     </div>
     <div class="display-box">
       <div class="top-box">
@@ -49,4 +90,11 @@
       [(ngModel)]="discName"
     /><button (click)="search()">Search</button>
   </div>
+</div>
+<div class="search-bar">
+  <input
+    type="text"
+    placeholder="Search for a disc"
+    [(ngModel)]="discName"
+  /><button (click)="search()">Search</button>
 </div>

@@ -11,3 +11,40 @@ h2 {
   margin-top: -15px;
   font-size: medium;
 }
+.login-button {
+  display: none;
+}
+
+@media (max-width: 479px) {
+  h1 {
+    display: block;
+    padding-left: 25px;
+  }
+  h2 {
+    display: block;
+    padding-left: 25px;
+  }
+  .login-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: right;
+  }
+  .header-section {
+    width: 50%;
+  }
+  .right-side {
+    display: block;
+    width: 50%;
+    padding: 10px;
+    padding-bottom: 25px;
+    height: 100%;
+  }
+  app-header {
+    display: flex;
+  }
+  .whole {
+    display: flex;
+    align-items: center;
+  }
+}

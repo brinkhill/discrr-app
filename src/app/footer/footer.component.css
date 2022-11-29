@@ -25,3 +25,16 @@
   text-decoration: none;
   color: #1e3754;
 }
+.version-link {
+  font-size: small;
+  color: #121e2d;
+  margin-top: -10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 479px) {
+  .version-link {
+    padding-bottom: 80px;
+  }
+}
