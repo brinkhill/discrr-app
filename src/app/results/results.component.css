@@ -1,26 +1,23 @@
 .results-box {
-  height: 700px;
+  height: auto;
   width: 70%;
 }
 .info-box {
-  border: solid 2px #30363d;
-  border-radius: 8px;
-  width: 30%;
+  width: 40%;
 }
 .bigger {
   display: flex;
   height: 90%;
+  border: solid 2px #30363d;
+  border-radius: 8px;
+  padding: 10px;
 }
 
 .display-box {
-  width: 70%;
-
-  border: solid 2px #30363d;
-  border-radius: 8px;
+  width: 60%;
 }
 .search-box {
   margin-top: 10px;
-  border: solid 2px #30363d;
   border-radius: 8px;
   height: 10%;
   display: flex;
@@ -32,7 +29,7 @@
   margin-left: 10px;
   font-size: 50px;
   margin-top: -28px;
-  margin-bottom: 70px;
+  margin-bottom: 30px;
 }
 .disc-brand {
   margin-left: 10px;
@@ -44,18 +41,43 @@
   font-size: 20px;
 }
 
-.disc-stats {
-  margin-left: 10px;
-  font-size: 16px;
-  font-weight: 300;
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  height: 50%;
+}
+
+.stat {
+  /* background-color: green; */
+  height: 50%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 80px;
+  margin: -15px;
 }
 
 .flight-box {
-  width: 50%;
-  height: 100%;
+  width: 70%;
+
   border: dashed 2px #30363d;
   height: 80%;
 }
+
 .photo {
   width: 50%;
   height: 80%;
@@ -68,12 +90,12 @@
   height: 22%;
 }
 .top-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 77%;
   padding-left: 20px;
   padding-right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 input {
@@ -88,7 +110,7 @@ input {
   margin-right: 15px;
 }
 
-button {
+.search-button {
   font-family: inherit;
   width: 70px;
   height: 40px;
@@ -108,8 +130,44 @@ button {
 .mobile-buy-now {
   display: none;
 }
+.stabilty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+  margin-bottom: 40px;
+}
+
+.buy-now-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+.buy-now-button a {
+  text-decoration: none;
+}
+.buy-now {
+  font-family: inherit;
+  width: 110px;
+  height: 40px;
+  background-color: #22272e;
+  border: 1px solid #30363d;
+  border-radius: 5px;
+  color: #e8eaed;
+  font-size: 15px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 @media (max-width: 479px) {
+  .disc-name {
+    margin-bottom: 70px;
+  }
   .info-box {
     width: 100%;
     display: block;
@@ -154,6 +212,8 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: nowrap;
+    height: auto;
   }
   .stat {
     width: 25%;
@@ -166,6 +226,7 @@ button {
     justify-content: center;
     align-items: center;
     font-size: 80px;
+    margin: auto;
     margin-top: -10px;
   }
   .title {
@@ -181,7 +242,7 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: -60px;
+    /* margin-top: -60px; */
   }
   .mobile-display-box {
     display: block;

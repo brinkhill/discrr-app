@@ -86,9 +86,18 @@
           />
           <img *ngIf="skeleton" class="flight-path" />
         </div>
-        <div class="photo"></div>
       </div>
-      <div class="bottom-box"></div>
+      <div class="buy-now-button">
+        <a href="{{ fdLink }}" target="_blank"
+          ><button class="buy-now">
+            Buy Now
+            <span class="material-symbols-outlined"> north_east </span>
+          </button></a
+        >
+      </div>
+      <!-- <div class="photo"></div> -->
+
+      <!-- <div class="bottom-box"></div> -->
     </div>
   </div>
   <div class="search-box">
@@ -96,13 +105,18 @@
       type="text"
       placeholder="Search for a disc"
       [(ngModel)]="discName"
-    /><button (click)="search()">Search</button>
+      (keydown.enter)="search()"
+    /><button class="search-button" (click)="search()">Search</button>
   </div>
 </div>
 <div class="search-bar">
-  <input
-    type="text"
-    placeholder="Search for a disc"
-    [(ngModel)]="discName"
-  /><button (click)="search()">Search</button>
+  <input type="text" placeholder="Search for a disc" [(ngModel)]="discName" />
+  <button class="search-button" (click)="search()">Search</button>
 </div>
+<script>
+  document.onkeydown = function () {
+    if (window.event.keyCode == "13") {
+      search();
+    }
+  };
+</script>
