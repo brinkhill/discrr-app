@@ -16,7 +16,7 @@ export class ResultsComponent {
   fdLink: string = '';
   public search() {
     this.http
-      .get('https://discitapi.herokuapp.com/disc/name/' + this.discName)
+      .get('https://discit-api.fly.dev/disc?name=' + this.discName)
       .subscribe((response) => {
         this.response = [];
         this.response = response;
