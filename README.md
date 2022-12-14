@@ -1,6 +1,8 @@
-# DiscrrApp
+# Discrr App
 
 This project was created to improve my skills by designing an Angular application that connects to a REST api.
+
+discrr.com
 
 ## Development server
 
