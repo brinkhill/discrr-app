@@ -202,7 +202,7 @@ input {
   }
   .search-bar {
     display: flex;
-    background-color: #333;
+    background-color: #171a1e;
     overflow: hidden;
     position: fixed;
     bottom: 0;
