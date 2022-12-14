@@ -5,3 +5,9 @@ body {
   background-color: rgb(13, 17, 23);
   color: #e8eaed;
 }
+
+@media (max-width: 479px) {
+  body {
+    margin-top: -10px;
+  }
+}

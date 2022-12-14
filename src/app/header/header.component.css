@@ -23,6 +23,7 @@ h2 {
   h2 {
     display: block;
     padding-left: 10px;
+    margin-top: -20px;
   }
   .login-button {
     display: flex;

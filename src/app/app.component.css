@@ -8,10 +8,3 @@ app-search {
   align-items: center;
   justify-content: center;
 }
-
-@media (max-width: 479px) {
-  app-results {
-  }
-  app-search {
-  }
-}
