@@ -183,8 +183,8 @@ input {
   .disc-category {
     margin-left: 10px;
     font-size: 1.25em;
-    margin-bottom: 18px;
-    margin-top: -70px;
+    /* margin-bottom: 18px;
+    margin-top: -70px; */
   }
   .results-box {
     height: 100%;
