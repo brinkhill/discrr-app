@@ -47,5 +47,6 @@ h2 {
   .whole {
     display: flex;
     align-items: center;
+    height: 20%;
   }
 }

@@ -169,9 +169,11 @@ input {
 
 @media (max-width: 479px) {
   .disc-brand {
+    font-size: 1.4em;
     margin-top: 8px;
   }
   .disc-name {
+    font-size: 2.5em;
     margin-bottom: 70px;
   }
   .info-box {
@@ -232,7 +234,7 @@ input {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 80px;
+    font-size: 4em;
     margin: auto;
     margin-top: -10px;
   }
@@ -240,7 +242,7 @@ input {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 106x;
+    font-size: 1em;
   }
   h4 {
     margin-top: -60px;
