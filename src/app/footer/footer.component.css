@@ -35,6 +35,6 @@
 }
 @media (max-width: 479px) {
   .version-link {
-    padding-bottom: 80px;
+    padding-bottom: 10px;
   }
 }

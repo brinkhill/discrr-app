@@ -11,6 +11,7 @@
         {{ response[0].category }}
       </h4>
       <h4 *ngIf="skeleton" class="disc-category">Category</h4>
+
       <div class="stats">
         <div class="stat">
           <div *ngIf="!skeleton">
@@ -66,13 +67,31 @@
         />
         <img *ngIf="skeleton" class="flight-path" />
       </div>
-      <div class="mobile-buy-now">
-        <a href="{{ fdLink }}" target="_blank"
-          ><button class="buy-now">
-            Buy Now
-            <span class="material-symbols-outlined"> north_east </span>
-          </button></a
-        >
+      <div class="bottom-buttons">
+        <div class="mobile-buy-now">
+          <a href="{{ fdLink }}" target="_blank"
+            ><button class="buy-now">
+              <span class="material-symbols-outlined"> content_copy </span>
+              Copy
+            </button></a
+          >
+        </div>
+        <div class="mobile-buy-now">
+          <a href="{{ fdLink }}" target="_blank"
+            ><button class="buy-now">
+              <span class="material-symbols-outlined"> north_east </span>
+              Buy Now
+            </button></a
+          >
+        </div>
+        <div class="mobile-buy-now">
+          <a href="{{ fdLink }}" target="_blank"
+            ><button class="buy-now">
+              Similar Discs
+              <!-- <span class="material-symbols-outlined"> north_east </span> -->
+            </button></a
+          >
+        </div>
       </div>
     </div>
     <div class="display-box">
@@ -95,6 +114,7 @@
           </button></a
         >
       </div>
+
       <!-- <div class="photo"></div> -->
 
       <!-- <div class="bottom-box"></div> -->
