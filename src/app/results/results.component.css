@@ -111,6 +111,9 @@ input {
 }
 
 .search-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: inherit;
   width: 70px;
   height: 40px;
