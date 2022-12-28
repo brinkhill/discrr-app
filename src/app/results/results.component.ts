@@ -31,4 +31,7 @@ export class ResultsComponent {
           this.response[0].name_slug;
       });
   }
+  public hideKeyboard() {
+    (document.activeElement as HTMLElement).blur();
+  }
 }

@@ -1,191 +1,76 @@
-.results-box {
-  height: auto;
-  width: 70%;
-}
-.info-box {
-  width: 40%;
-}
-.bigger {
-  display: flex;
-  height: 90%;
-  border: solid 2px #30363d;
-  border-radius: 8px;
-  padding: 10px;
-}
-
-.display-box {
-  width: 60%;
-}
-.search-box {
-  margin-top: 10px;
-  border-radius: 8px;
-  height: 10%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.disc-name {
-  margin-left: 10px;
-  font-size: 50px;
-  margin-top: -28px;
-  margin-bottom: 30px;
-}
-.disc-brand {
-  margin-left: 10px;
-  margin-top: 30px;
-  font-size: 25px;
-}
-.disc-category {
-  margin-left: 10px;
-  font-size: 20px;
-}
-
-.stats {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  height: 50%;
-}
-
-.stat {
-  /* background-color: green; */
-  height: 50%;
-  width: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.number {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 80px;
-  margin: -15px;
-}
-
-.flight-box {
-  width: 70%;
-
-  border: dashed 2px #30363d;
-  height: 80%;
-}
-
-.photo {
-  width: 50%;
-  height: 80%;
-  border: dashed 2px #30363d;
-  margin-left: 30px;
-}
-.bottom-box {
-  border-top: solid 2px #30363d;
-  width: 100%;
-  height: 22%;
-}
-.top-box {
-  height: 77%;
-  padding-left: 20px;
-  padding-right: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-input {
-  width: 200px;
-  height: 35px;
-  padding: 1px 15px;
-  color: #e8eaed;
-  border: 1px solid #30363d;
-  border-radius: 5px;
-  font-size: 17px;
-  background-color: #22272e;
-  margin-right: 15px;
-}
-
-.search-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: inherit;
-  width: 70px;
-  height: 40px;
-  background-color: #22272e;
-  border: 1px solid #30363d;
-  border-radius: 5px;
-  color: #e8eaed;
-  font-size: 15px;
-  cursor: pointer;
-}
-.search-bar {
-  display: none;
-}
-.mobile-display-box {
-  display: none;
-}
-.mobile-buy-now {
-  display: none;
-}
-.stabilty {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: 20px;
-  margin-bottom: 40px;
-}
-
-.buy-now-button {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-bottom: 10px;
-  padding-top: 10px;
-}
-.buy-now-button a {
-  text-decoration: none;
-}
-.buy-now {
-  font-family: inherit;
-  width: 110px;
-  height: 40px;
-  background-color: #22272e;
-  border: 1px solid #30363d;
-  border-radius: 5px;
-  color: #e8eaed;
-  font-size: 15px;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 @media (max-width: 479px) {
+  .top {
+    height: 12%;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    width: 100%;
+    height: 67%;
+    border-radius: 10px;
+  }
+  .search-icon {
+    width: 7%;
+    color: #22272e;
+  }
+  .search-button {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: inherit;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  .search-input {
+    width: 80%;
+    background: transparent;
+    font-size: 16px;
+    border: none;
+    height: 80%;
+    border-radius: 10px;
+  }
+  .search-input:focus {
+    outline: none;
+  }
+  .two {
+    height: 80%;
+    border: dashed 2px #30363d;
+    border-radius: 8px;
+    display: block;
+    padding: 5px;
+  }
+  .three {
+    height: 15%;
+  }
   .disc-brand {
-    font-size: 1.4em;
-    margin-top: 0px;
+    font-size: 1.3em;
+    display: block;
+    padding-left: 10px;
   }
   .disc-name {
-    font-size: 2.5em;
-    margin-bottom: 70px;
+    font-size: 2.35em;
+    display: block;
+    padding-left: 10px;
+  }
+  .disc-category {
+    font-size: 1.3em;
+    display: block;
+    padding-left: 10px;
   }
   .info-box {
     width: 100%;
+    height: 50%;
     display: block;
   }
-  .disc-category {
-    margin-left: 10px;
-    font-size: 1.25em;
-    /* margin-bottom: 18px;
-    margin-top: -70px; */
-  }
+
   .results-box {
     height: 100%;
 
@@ -197,30 +82,22 @@ input {
   .display-box {
     display: none;
   }
-  .search-box {
-    display: none;
+  .titles {
+    height: 25%;
   }
-  .search-bar {
+  .flight-path {
+    height: 42%;
+  }
+  .actions {
+    height: 11%;
+  }
+  .bottom-text {
     display: flex;
-    background-color: #171a1e;
-    overflow: hidden;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    padding: 7px;
     align-items: center;
     justify-content: center;
-  }
-  .search-bar input {
-    width: 240px;
-    height: 35px;
-    padding: 1px 15px;
-    color: #e8eaed;
-    border: 1px solid #30363d;
-    border-radius: 5px;
-    font-size: 17px;
-    background-color: #22272e;
-    /* margin-right: 15px; */
+    height: 3%;
+
+    font-size: 13px;
   }
 
   .stats {
@@ -228,38 +105,43 @@ input {
     align-items: center;
     justify-content: center;
     flex-wrap: nowrap;
-    height: auto;
-    margin-top: -25px;
+    height: 20%;
   }
   .stat {
     width: 25%;
+    height: 100%;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
   }
   .number {
     display: flex;
     justify-content: center;
-    align-items: center;
-    font-size: 4em;
-    margin: auto;
-    margin-top: -10px;
+    font-size: 3em;
   }
   .title {
     display: flex;
     justify-content: center;
-    align-items: center;
-    font-size: 1em;
   }
-  h4 {
-    margin-top: -60px;
-  }
+
   .stabilty {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: -35px;
-    margin-bottom: 20px;
+  }
+  .fp-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 90%;
+    width: 100%;
+  }
+  .inside {
+    border: solid 2px #22272e;
+    border-radius: 5px;
+    height: 95%;
+    width: 60%;
   }
   .mobile-display-box {
     display: block;
@@ -270,7 +152,7 @@ input {
     border-radius: 5px;
   }
   .mobile-buy-now {
-    width: 100%;
+    width: 33%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -299,5 +181,18 @@ input {
   }
   .mobile-buy-now a {
     text-decoration: none;
+  }
+  .created-by {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 9px;
+    height: 4vh;
+    color: #58a6ff;
+  }
+  .main-results {
+    width: 95%;
+    margin-left: 9.4px;
+    height: 72vh;
   }
 }
