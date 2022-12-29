@@ -35,7 +35,7 @@
 }
 @media (max-width: 479px) {
   .home-button {
-    width: 33vw;
+    width: 20vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -43,20 +43,32 @@
   span {
     font-size: 30px;
   }
+  .recents-button {
+    width: 20vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
   .search-button {
-    width: 33vw;
+    width: 20vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .profile-button {
+    width: 20vw;
     display: flex;
     align-items: center;
     justify-content: center;
   }
   .settings-button {
-    width: 33vw;
-    font-size: 24px;
+    width: 20vw;
     display: flex;
     align-items: center;
     justify-content: center;
   }
+
   .circle {
     padding: 10px;
     border-radius: 20%;
@@ -71,7 +83,8 @@
     align-items: center;
     justify-content: center;
     height: 7vh;
-
-    border-top: 1px solid #121e2d;
+    border-top: 1px solid #8899a6;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+      rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
   }
 }
