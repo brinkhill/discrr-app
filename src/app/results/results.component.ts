@@ -64,7 +64,31 @@ export class ResultsComponent {
     (document.activeElement as HTMLElement).blur();
   }
   public copyContent() {
-    let copytext = this.response;
+    let copytext =
+      'Brand: ' +
+      this.response.brand +
+      ';' +
+      'Name: ' +
+      this.response.name +
+      ';' +
+      'Category: ' +
+      this.response.category +
+      ';' +
+      'Speed: ' +
+      this.response.speed +
+      ';' +
+      'Glide: ' +
+      this.response.glide +
+      ';' +
+      'Fade: ' +
+      this.response.fade +
+      ';' +
+      'Turn: ' +
+      this.response.turn +
+      ';' +
+      'Stability: ' +
+      this.response.stability +
+      ';';
     try {
       navigator.clipboard.writeText(copytext);
       console.log('Content copied to clipboard');
