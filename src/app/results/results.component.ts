@@ -64,8 +64,7 @@ export class ResultsComponent {
     (document.activeElement as HTMLElement).blur();
   }
   public copyContent() {
-    let copytext =
-      'Brand: ' + this.response.brand + ' Name: ' + this.response.name;
+    let copytext = this.response.brand;
     try {
       navigator.clipboard.writeText(copytext);
       console.log('Content copied to clipboard');
