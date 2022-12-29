@@ -2,6 +2,10 @@ span {
   font-size: 2.2em;
   font-weight: 600;
 }
+a {
+  color: #ffff;
+  text-decoration: none;
+}
 .main-header {
   display: flex;
   align-items: center;
