@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, Input } from '@angular/core';
-import { MatTooltipModule } from '@angular/material/tooltip';
 
 import { ApiService } from '../api.service';
 
