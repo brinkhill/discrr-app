@@ -1,147 +1,137 @@
-<div class="results-box">
-  <div class="bigger">
-    <div class="info-box">
-      <p *ngIf="!skeleton" class="disc-brand">{{ response[0].brand }}</p>
-      <p *ngIf="skeleton" class="disc-brand">Brand</p>
+<div class="main-results">
+  <div class="two">
+    <div class="titles">
+      <div class="fav">
+        <span class="material-symbols-outlined"> favorite </span>
+      </div>
+      <span *ngIf="!skeleton" class="disc-brand">{{ response[0].brand }}</span>
+      <span *ngIf="skeleton" class="disc-brand">{{ response.brand }}</span>
 
-      <h3 *ngIf="!skeleton" class="disc-name">{{ response[0].name }}</h3>
-      <h3 *ngIf="skeleton" class="disc-name">Disc Name</h3>
+      <span *ngIf="!skeleton" class="disc-name">{{ response[0].name }}</span>
+      <span *ngIf="skeleton" class="disc-name">{{ response.name }}</span>
 
-      <h4 *ngIf="!skeleton" class="disc-category">
+      <span *ngIf="!skeleton" class="disc-category">
         {{ response[0].category }}
-      </h4>
-      <h4 *ngIf="skeleton" class="disc-category">Category</h4>
-
-      <div class="stats">
-        <div class="stat">
-          <div *ngIf="!skeleton">
-            <p class="title">Speed:</p>
-            <p class="number">{{ response[0]?.speed }}</p>
-          </div>
-          <div *ngIf="skeleton">
-            <p class="title">Speed:</p>
-            <p class="number">0</p>
-          </div>
+      </span>
+      <span *ngIf="skeleton" class="disc-category">{{
+        response.category
+      }}</span>
+    </div>
+    <div class="stats">
+      <div class="stat">
+        <div *ngIf="!skeleton">
+          <span class="title">Speed:</span>
+          <span class="number">{{ response[0]?.speed }}</span>
         </div>
-        <div class="stat">
-          <div *ngIf="!skeleton">
-            <p class="title">Glide:</p>
-            <p class="number">{{ response[0].glide }}</p>
-          </div>
-          <div *ngIf="skeleton">
-            <p class="title">Glide:</p>
-            <p class="number">0</p>
-          </div>
-        </div>
-        <div class="stat">
-          <div *ngIf="!skeleton">
-            <p class="title">Turn:</p>
-            <p class="number">{{ response[0].turn }}</p>
-          </div>
-          <div *ngIf="skeleton">
-            <p class="title">Turn:</p>
-            <p class="number">0</p>
-          </div>
-        </div>
-        <div class="stat">
-          <div *ngIf="!skeleton">
-            <p class="title">Fade:</p>
-            <p class="number">{{ response[0].fade }}</p>
-          </div>
-          <div *ngIf="skeleton">
-            <p class="title">Fade:</p>
-            <p class="number">0</p>
-          </div>
+        <div *ngIf="skeleton">
+          <span class="title">Speed:</span>
+          <span class="number">{{ response.speed }}</span>
         </div>
       </div>
-      <div class="stabilty">
-        <p *ngIf="!skeleton">Stability: {{ response[0].stability }}</p>
-        <p *ngIf="skeleton">Stability: Unknown</p>
-      </div>
-      <div class="mobile-display-box">
-        <img
-          *ngIf="!skeleton"
-          class="flight-path"
-          src="{{ response[0].pic }}"
-          style="width: 100%; height: 100%"
-        />
-        <img *ngIf="skeleton" class="flight-path" />
-      </div>
-      <div class="bottom-buttons">
-        <div class="mobile-buy-now">
-          <a href="{{ fdLink }}" target="_blank"
-            ><button class="buy-now">
-              <span class="material-symbols-outlined"> content_copy </span>
-              Copy
-            </button></a
-          >
+      <div class="stat">
+        <div *ngIf="!skeleton">
+          <span class="title">Glide:</span>
+          <span class="number">{{ response[0].glide }}</span>
         </div>
-        <div class="mobile-buy-now">
-          <a href="{{ fdLink }}" target="_blank"
-            ><button class="buy-now">
-              <span class="material-symbols-outlined"> north_east </span>
-              Buy Now
-            </button></a
-          >
+        <div *ngIf="skeleton">
+          <span class="title">Glide:</span>
+          <span class="number">{{ response.glide }}</span>
         </div>
-        <div class="mobile-buy-now">
-          <a href="{{ fdLink }}" target="_blank"
-            ><button class="buy-now">
-              Similar Discs
-              <!-- <span class="material-symbols-outlined"> north_east </span> -->
-            </button></a
-          >
+      </div>
+      <div class="stat">
+        <div *ngIf="!skeleton">
+          <span class="title">Turn:</span>
+          <span class="number">{{ response[0].turn }}</span>
+        </div>
+        <div *ngIf="skeleton">
+          <span class="title">Turn:</span>
+          <span class="number">{{ response.turn }}</span>
+        </div>
+      </div>
+      <div class="stat">
+        <div *ngIf="!skeleton">
+          <span class="title">Fade:</span>
+          <span class="number">{{ response[0].fade }}</span>
+        </div>
+        <div *ngIf="skeleton">
+          <span class="title">Fade:</span>
+          <span class="number">{{ response.fade }}</span>
         </div>
       </div>
     </div>
-    <div class="display-box">
-      <div class="top-box">
-        <div class="flight-box">
+    <div class="flight-path">
+      <div class="stabilty">
+        <span *ngIf="!skeleton">*{{ response[0].stability }}*</span>
+        <span *ngIf="skeleton">*{{ response.stability }}*</span>
+      </div>
+      <div class="fp-container">
+        <div class="inside">
           <img
             *ngIf="!skeleton"
-            class="flight-path"
             src="{{ response[0].pic }}"
             style="width: 100%; height: 100%"
           />
-          <img *ngIf="skeleton" class="flight-path" />
+          <img
+            *ngIf="skeleton"
+            src="{{ response.pic }}"
+            style="width: 100%; height: 100%"
+          />
         </div>
       </div>
-      <div class="buy-now-button">
-        <a href="{{ fdLink }}" target="_blank"
+    </div>
+    <div class="actions">
+      <div class="mobile-buy-now" (click)="copyContent()">
+        <a
           ><button class="buy-now">
-            Buy Now
-            <span class="material-symbols-outlined"> north_east </span>
+            <span class="material-symbols-outlined"> content_copy </span>
+            Copy
           </button></a
         >
       </div>
-
-      <!-- <div class="photo"></div> -->
-
-      <!-- <div class="bottom-box"></div> -->
+      <div class="mobile-buy-now">
+        <a href="{{ fdLink }}" target="_blank"
+          ><button class="buy-now">
+            <span class="material-symbols-outlined"> north_east </span>
+            Buy Now
+          </button></a
+        >
+      </div>
+      <div class="mobile-buy-now">
+        <a href="{{ fdLink }}" target="_blank"
+          ><button class="buy-now">
+            Similar Discs
+            <!-- <span class="material-symbols-outlined"> north_east </span> -->
+          </button></a
+        >
+      </div>
     </div>
   </div>
-  <div class="search-box">
-    <input
-      type="text"
-      placeholder="Search for a disc"
-      [(ngModel)]="discName"
-      (keydown.enter)="search()"
-    /><button class="search-button" (click)="search()">Search</button>
+  <div class="top">
+    <div
+      class="search-bar"
+      [ngClass]="{
+        redBorder: errorTruth == true
+      }"
+    >
+      <button (click)="search()" class="search-button" id="simple-search">
+        <span class="material-symbols-outlined search-icon"> search </span>
+      </button>
+      <input
+        class="search-input"
+        type="text"
+        placeholder="Find a disc..."
+        [(ngModel)]="discName"
+        (keydown.enter)="search()"
+        (keydown.enter)="hideKeyboard()"
+      />
+    </div>
   </div>
-</div>
-<div class="search-bar">
-  <input
-    type="text"
-    placeholder="Search for a disc"
-    [(ngModel)]="discName"
-    (keydown.enter)="search()"
-  />
-  <button class="search-button" (click)="search()">Search</button>
 </div>
 <script>
   document.onkeydown = function () {
     if (window.event.keyCode == "13") {
       search();
+      hideKeyboard();
     }
   };
 </script>
