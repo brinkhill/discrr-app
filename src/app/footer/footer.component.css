@@ -1,40 +1,107 @@
-.brinkley-link {
+.home-button {
+  width: 20vw;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #58a6ff;
 }
-
-.brinkley-link a {
-  border-bottom: 1px dotted #58a6ff;
-  text-decoration: none;
-  color: #58a6ff;
+span {
+  font-size: 30px;
 }
-
-.discit-link {
-  font-size: small;
-  color: #1e3754;
-  margin-top: -25px;
+.recents-button {
+  width: 20vw;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.discit-link a {
-  border-bottom: 1px dotted #1e3754;
-  text-decoration: none;
-  color: #1e3754;
-}
-.version-link {
-  font-size: small;
-  color: #121e2d;
-  margin-top: -10px;
+.search-button {
+  width: 20vw;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.profile-button {
+  width: 20vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.settings-button {
+  width: 20vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle {
+  padding: 10px;
+  border-radius: 20%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-footer {
+  display: none;
 }
 @media (max-width: 479px) {
-  .version-link {
-    padding-bottom: 10px;
+  .disclaimer {
+    display: none;
+  }
+  .home-button {
+    width: 20vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  span {
+    font-size: 30px;
+  }
+  .recents-button {
+    width: 20vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .search-button {
+    width: 20vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .profile-button {
+    width: 20vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .settings-button {
+    width: 20vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  a {
+    color: #ffff;
+  }
+
+  .circle {
+    padding: 10px;
+    border-radius: 20%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .main-footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 7vh;
+    border-top: 1px solid #8899a6;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+      rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
   }
 }
