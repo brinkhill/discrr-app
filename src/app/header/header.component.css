@@ -1,18 +1,13 @@
-h1 {
+span {
+  font-size: 2.2em;
+  font-weight: 600;
+}
+.main-header {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-h2 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: -15px;
-  font-size: medium;
-}
-.login-button {
-  display: none;
+  width: 100%;
+  height: 8vh;
 }
 
 @media (max-width: 479px) {

@@ -5,16 +5,17 @@
         <span class="material-symbols-outlined"> favorite </span>
       </div>
       <span *ngIf="!skeleton" class="disc-brand">{{ response[0].brand }}</span>
-      <span *ngIf="skeleton" class="disc-brand">Brand</span>
+      <span *ngIf="skeleton" class="disc-brand">{{ response.brand }}</span>
 
       <span *ngIf="!skeleton" class="disc-name">{{ response[0].name }}</span>
-      <span *ngIf="skeleton" class="disc-name">Disc Name</span>
+      <span *ngIf="skeleton" class="disc-name">{{ response.name }}</span>
 
       <span *ngIf="!skeleton" class="disc-category">
         {{ response[0].category }}
       </span>
-      <span *ngIf="skeleton" class="disc-category">Category</span>
-      <span *ngIf="!skeleton" class="disc-otd"> </span>
+      <span *ngIf="skeleton" class="disc-category">{{
+        response.category
+      }}</span>
     </div>
     <div class="stats">
       <div class="stat">
@@ -24,7 +25,7 @@
         </div>
         <div *ngIf="skeleton">
           <span class="title">Speed:</span>
-          <span class="number">0</span>
+          <span class="number">{{ response.speed }}</span>
         </div>
       </div>
       <div class="stat">
@@ -34,7 +35,7 @@
         </div>
         <div *ngIf="skeleton">
           <span class="title">Glide:</span>
-          <span class="number">0</span>
+          <span class="number">{{ response.glide }}</span>
         </div>
       </div>
       <div class="stat">
@@ -44,7 +45,7 @@
         </div>
         <div *ngIf="skeleton">
           <span class="title">Turn:</span>
-          <span class="number">0</span>
+          <span class="number">{{ response.turn }}</span>
         </div>
       </div>
       <div class="stat">
@@ -54,14 +55,14 @@
         </div>
         <div *ngIf="skeleton">
           <span class="title">Fade:</span>
-          <span class="number">0</span>
+          <span class="number">{{ response.fade }}</span>
         </div>
       </div>
     </div>
     <div class="flight-path">
       <div class="stabilty">
-        <span *ngIf="!skeleton">Stability: {{ response[0].stability }}</span>
-        <span *ngIf="skeleton">Stability: Unknown</span>
+        <span *ngIf="!skeleton">*{{ response[0].stability }}*</span>
+        <span *ngIf="skeleton">*{{ response.stability }}*</span>
       </div>
       <div class="fp-container">
         <div class="inside">
@@ -70,13 +71,17 @@
             src="{{ response[0].pic }}"
             style="width: 100%; height: 100%"
           />
-          <img *ngIf="skeleton" />
+          <img
+            *ngIf="skeleton"
+            src="{{ response.pic }}"
+            style="width: 100%; height: 100%"
+          />
         </div>
       </div>
     </div>
     <div class="actions">
-      <div class="mobile-buy-now">
-        <a href="{{ fdLink }}" target="_blank"
+      <div class="mobile-buy-now" (click)="copyContent()">
+        <a
           ><button class="buy-now">
             <span class="material-symbols-outlined"> content_copy </span>
             Copy
@@ -102,7 +107,12 @@
     </div>
   </div>
   <div class="top">
-    <div class="search-bar">
+    <div
+      class="search-bar"
+      [ngClass]="{
+        redBorder: errorTruth == true
+      }"
+    >
       <button (click)="search()" class="search-button" id="simple-search">
         <span class="material-symbols-outlined search-icon"> search </span>
       </button>
