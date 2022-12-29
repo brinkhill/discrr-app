@@ -82,6 +82,9 @@ span {
     align-items: center;
     justify-content: center;
   }
+  a {
+    color: #ffff;
+  }
 
   .circle {
     padding: 10px;
