@@ -1,14 +1,12 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, Input } from '@angular/core';
 
-import { ApiService } from '../api.service';
-
 @Component({
-  selector: 'app-results',
-  templateUrl: './results.component.html',
-  styleUrls: ['./results.component.css'],
+  selector: 'mass',
+  templateUrl: './mass.component.html',
+  styleUrls: ['./mass.component.css'],
 })
-export class ResultsComponent {
+export class MassComponent {
   discName: string = '';
   constructor(private http: HttpClient) {}
   response: any;
