@@ -21,7 +21,6 @@
   border: solid 0.3px red;
 }
 .search-icon {
-  width: 7%;
   color: #8899a6;
 }
 .search-input::placeholder {
@@ -36,6 +35,21 @@
   border: none;
   font-size: 15px;
   cursor: pointer;
+}
+.clear-button {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: inherit;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  color: #8899a6;
+
+  margin-right: 12px;
+  padding-right: 0px;
+  padding-left: 0px;
 }
 .search-input {
   width: 80%;
@@ -189,22 +203,7 @@
   align-items: center;
   justify-content: center;
 }
-.buy-now {
-  font-family: inherit;
-  width: 110px;
-  height: 40px;
-  background-color: #22303c;
-  border: solid 0.3px #8899a6;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
-    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-  border-radius: 8px;
-  color: #e8eaed;
-  font-size: 15px;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 .mobile-buy-now a {
   text-decoration: none;
 }
@@ -220,6 +219,11 @@
   width: 40%;
   margin-left: 9.4px;
   height: 74vh;
+}
+@media (min-width: 1080px) {
+  .main-results {
+    display: none;
+  }
 }
 
 @media (max-width: 479px) {
@@ -241,12 +245,16 @@
     /* border: solid 0.3px #8899a6; */
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
       rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    transition: background-color 0.5s ease;
   }
+  /* .green-fade {
+    background-color: green;
+    transition: background-color 1.5s ease;
+  } */
   .redBorder {
     border: solid 0.3px red;
   }
   .search-icon {
-    width: 7%;
     color: #8899a6;
   }
   .search-input::placeholder {
@@ -401,13 +409,12 @@
     border-radius: 5px;
   }
   .mobile-buy-now {
-    width: 33%;
+    width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     padding-bottom: 10px;
     padding-top: 10px;
-    margin-bottom: -11px;
   }
   .bottom-buttons {
     display: flex;
@@ -416,17 +423,15 @@
   }
   .buy-now {
     font-family: inherit;
-    width: 110px;
+    width: 18vw;
     height: 40px;
-    background-color: #22303c;
-    border: solid 0.3px #8899a6;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
-      rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    background-color: transparent;
+    border: none;
     border-radius: 8px;
-    color: #e8eaed;
-    font-size: 15px;
+    color: #ffff;
+    font-size: 11px;
     cursor: pointer;
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
   }

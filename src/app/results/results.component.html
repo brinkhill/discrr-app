@@ -1,20 +1,35 @@
 <div class="main-results">
-  <div class="two">
+  <div class="two" *ngIf="!similarDiscsActive">
     <div class="titles">
       <div class="fav">
-        <span class="material-symbols-outlined"> favorite </span>
+        <svg
+          data-src="https://api.macosicons.com/uploads/heart_24px_91d427ad40.svg"
+          id="heart"
+          class="icon-image icon-image-24"
+          fill="none"
+          height="24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+          data-attributes-set="fill,height,width,xmlns"
+          data-rendered="true"
+        >
+          <path
+            d="M16.546 3V2c-.02 0-.041 0-.061.002l.06.998zm-2.608.835l-.528-.849.528.85zM7.454 3l.061-.998A1.001 1.001 0 0 0 7.455 2v1zM2 8.655H1zM12 21l-.57.821a1 1 0 0 0 1.136.003zM22 8.655h-1zm-9.983-2.857l.859.513zm-.034 0l-.859.513zm.017.02v-1zm4.485-3.816a6.58 6.58 0 0 0-3.075.984l1.056 1.698a4.58 4.58 0 0 1 2.14-.686zm-3.075.984a6.829 6.829 0 0 0-2.251 2.3l1.717 1.025c.4-.669.946-1.226 1.59-1.627zm-.569 2.3a6.829 6.829 0 0 0-2.25-2.3L9.533 4.684c.644.401 1.19.958 1.59 1.627l1.717-1.026zm-2.25-2.3a6.58 6.58 0 0 0-3.076-.984l-.122 1.996a4.58 4.58 0 0 1 2.14.686l1.057-1.698zM7.453 2c-1.723 0-3.369.71-4.576 1.962l1.44 1.388A4.358 4.358 0 0 1 7.453 4zM2.878 3.962A6.762 6.762 0 0 0 1 8.655h2c0-1.246.478-2.434 1.317-3.305l-1.44-1.388zM1 8.655c0 1.639.749 3.285 1.73 4.76.993 1.494 2.298 2.925 3.576 4.157a46.419 46.419 0 0 0 5.09 4.226l.024.017.007.004.002.002L12 21l.57-.821-.004-.004a3.82 3.82 0 0 1-.098-.069 43.018 43.018 0 0 1-1.413-1.063 44.396 44.396 0 0 1-3.36-2.91c-1.223-1.18-2.418-2.498-3.3-3.825C3.501 10.963 3 9.715 3 8.655zM12 21l.567.824.002-.002.007-.005.024-.016.089-.062c.077-.055.188-.134.328-.236a45.462 45.462 0 0 0 4.676-3.902c1.278-1.229 2.585-2.658 3.578-4.156C22.253 11.964 23 10.31 23 8.655h-2c0 1.08-.503 2.338-1.396 3.685-.881 1.33-2.075 2.644-3.297 3.819a43.462 43.462 0 0 1-4.771 3.945l-.079.055-.019.014-.004.002v.001zM23 8.655a6.762 6.762 0 0 0-1.878-4.693l-1.44 1.388A4.762 4.762 0 0 1 21 8.655zm-1.878-4.693A6.358 6.358 0 0 0 16.546 2v2c1.17 0 2.298.481 3.137 1.35l1.44-1.388zM11.16 5.285c-.021.035.02-.037.074-.104A.99.99 0 0 1 12 4.818v2a1.01 1.01 0 0 0 .87-.497l.006-.01-1.717-1.026zm-.035 1.026l.006.01a1.101 1.101 0 0 0 .087.124c.066.08.324.373.783.373v-2a.99.99 0 0 1 .767.363c.055.067.095.14.074.104z"
+            fill="currentColor"
+          ></path>
+        </svg>
       </div>
-      <span *ngIf="!skeleton" class="disc-brand">{{ response[0].brand }}</span>
-      <span *ngIf="skeleton" class="disc-brand">{{ response.brand }}</span>
+      <span *ngIf="!skeleton" class="disc-brand">{{ response[0]?.brand }}</span>
+      <span *ngIf="skeleton" class="disc-brand">{{ response?.brand }}</span>
 
-      <span *ngIf="!skeleton" class="disc-name">{{ response[0].name }}</span>
-      <span *ngIf="skeleton" class="disc-name">{{ response.name }}</span>
+      <span *ngIf="!skeleton" class="disc-name">{{ response[0]?.name }}</span>
+      <span *ngIf="skeleton" class="disc-name">{{ response?.name }}</span>
 
       <span *ngIf="!skeleton" class="disc-category">
-        {{ response[0].category }}
+        {{ response[0]?.category }}
       </span>
       <span *ngIf="skeleton" class="disc-category">{{
-        response.category
+        response?.category
       }}</span>
     </div>
     <div class="stats">
@@ -25,55 +40,55 @@
         </div>
         <div *ngIf="skeleton">
           <span class="title">Speed:</span>
-          <span class="number">{{ response.speed }}</span>
+          <span class="number">{{ response?.speed }}</span>
         </div>
       </div>
       <div class="stat">
         <div *ngIf="!skeleton">
           <span class="title">Glide:</span>
-          <span class="number">{{ response[0].glide }}</span>
+          <span class="number">{{ response[0]?.glide }}</span>
         </div>
         <div *ngIf="skeleton">
           <span class="title">Glide:</span>
-          <span class="number">{{ response.glide }}</span>
+          <span class="number">{{ response?.glide }}</span>
         </div>
       </div>
       <div class="stat">
         <div *ngIf="!skeleton">
           <span class="title">Turn:</span>
-          <span class="number">{{ response[0].turn }}</span>
+          <span class="number">{{ response[0]?.turn }}</span>
         </div>
         <div *ngIf="skeleton">
           <span class="title">Turn:</span>
-          <span class="number">{{ response.turn }}</span>
+          <span class="number">{{ response?.turn }}</span>
         </div>
       </div>
       <div class="stat">
         <div *ngIf="!skeleton">
           <span class="title">Fade:</span>
-          <span class="number">{{ response[0].fade }}</span>
+          <span class="number">{{ response[0]?.fade }}</span>
         </div>
         <div *ngIf="skeleton">
           <span class="title">Fade:</span>
-          <span class="number">{{ response.fade }}</span>
+          <span class="number">{{ response?.fade }}</span>
         </div>
       </div>
     </div>
     <div class="flight-path">
       <div class="stabilty">
-        <span *ngIf="!skeleton">*{{ response[0].stability }}*</span>
-        <span *ngIf="skeleton">*{{ response.stability }}*</span>
+        <span *ngIf="!skeleton">*{{ response[0]?.stability }}*</span>
+        <span *ngIf="skeleton">*{{ response?.stability }}*</span>
       </div>
       <div class="fp-container">
         <div class="inside">
           <img
             *ngIf="!skeleton"
-            src="{{ response[0].pic }}"
+            src="{{ response[0]?.pic }}"
             style="width: 100%; height: 100%"
           />
           <img
             *ngIf="skeleton"
-            src="{{ response.pic }}"
+            src="{{ response?.pic }}"
             style="width: 100%; height: 100%"
           />
         </div>
@@ -83,47 +98,185 @@
       <div class="mobile-buy-now" (click)="copyContent()">
         <a
           ><button class="buy-now">
-            <span class="material-symbols-outlined"> content_copy </span>
-            Copy
+            <svg
+              data-src="https://api.macosicons.com/uploads/clipboard_full_24px_fde4118714.svg"
+              id="clipboard-full"
+              class="icon-image icon-image-24"
+              fill="none"
+              height="24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+              data-attributes-set="fill,height,width,xmlns"
+              data-rendered="true"
+            >
+              <g stroke="currentColor" stroke-width="2">
+                <path
+                  d="M7 3.5c-.932 0-1.398 0-1.765.152a2 2 0 0 0-1.083 1.083C4 5.102 4 5.568 4 6.5V17c0 1.886 0 2.828.586 3.414S6.114 21 8 21h8c1.886 0 2.828 0 3.414-.586S20 18.886 20 17V6.5c0-.932 0-1.398-.152-1.765a2 2 0 0 0-1.083-1.083C18.398 3.5 17.932 3.5 17 3.5"
+                ></path>
+                <path
+                  d="M7 3.75C7 2.784 7.784 2 8.75 2h6.5a1.75 1.75 0 1 1 0 3.5h-6.5A1.75 1.75 0 0 1 7 3.75z"
+                ></path>
+                <path
+                  d="M8 9h8m-8 4h8m-8 4h4"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </g>
+            </svg>
+            <div>Copy</div>
           </button></a
         >
       </div>
       <div class="mobile-buy-now">
         <a href="{{ fdLink }}" target="_blank"
           ><button class="buy-now">
-            <span class="material-symbols-outlined"> north_east </span>
-            Buy Now
+            <svg
+              data-src="https://api.macosicons.com/uploads/shopping_basket_24px_170bf07106.svg"
+              id="shopping-basket"
+              class="icon-image icon-image-24"
+              fill="none"
+              height="24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+              data-attributes-set="fill,height,width,xmlns"
+              data-rendered="true"
+            >
+              <path
+                d="M3.12 13.54c-.29-2.113-.433-3.17.165-3.855C3.882 9 4.949 9 7.082 9h9.835c2.134 0 3.2 0 3.798.685s.454 1.742.166 3.855l-.41 3c-.224 1.65-.337 2.474-.902 2.967s-1.397.493-3.06.493H7.491c-1.664 0-2.496 0-3.061-.493-.566-.494-.678-1.318-.903-2.966l-.409-3zM17 9V8c0-1.886 0-2.828-.586-3.414S14.886 4 13 4h-2c-1.886 0-2.828 0-3.414.586S7 6.114 7 8v1"
+                stroke="currentColor"
+                stroke-width="2"
+              ></path>
+            </svg>
+            <div>Purchase</div>
           </button></a
         >
       </div>
-      <div class="mobile-buy-now">
-        <a href="{{ fdLink }}" target="_blank"
+      <div class="mobile-buy-now" (click)="getSimilar()">
+        <a
           ><button class="buy-now">
-            Similar Discs
-            <!-- <span class="material-symbols-outlined"> north_east </span> -->
+            <svg
+              data-src="https://api.macosicons.com/uploads/stack_horizontal_24px_9448a4891e.svg"
+              id="stack-horizontal"
+              class="icon-image icon-image-24"
+              fill="none"
+              height="24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+              data-attributes-set="fill,height,width,xmlns"
+              data-rendered="true"
+            >
+              <g fill="currentColor">
+                <path
+                  d="M8.564 18.897l.218-.976zm8.343-12.446l-.954.302zM13.334 5.6l-.4-.917zm1.457-.534l-.105-.995zm-7.3 3.618l.836.548-.837-.548zM8 15v-.817H6V15zm0-.817v-1.89H6v1.89zm3-6.473l2.734-1.193-.8-1.833L10.2 5.876l.8 1.833zM6 15c0 .846-.001 1.553.053 2.112.054.56.174 1.124.525 1.605l1.615-1.18c-.034-.047-.107-.18-.15-.618C8.002 16.478 8 15.886 8 15zm5.183 2.085c-.813.354-1.356.59-1.776.727-.418.136-.569.123-.625.11l-.436 1.952c.58.13 1.146.014 1.681-.16.534-.174 1.181-.458 1.956-.797zm-4.605 1.632a3 3 0 0 0 1.768 1.157l.436-1.952a1 1 0 0 1-.59-.386l-1.614 1.18zM18 8c0-.408 0-.75-.013-1.025a3.225 3.225 0 0 0-.127-.826l-1.907.604c.008.023.026.1.037.317.01.216.01.502.01.93zm-4.266-1.484c.392-.17.654-.285.857-.362a1.43 1.43 0 0 1 .304-.094l-.209-1.989c-.283.03-.551.116-.808.214s-.57.235-.944.398zm4.126-.367a3 3 0 0 0-3.174-2.078l.21 1.99a1 1 0 0 1 1.057.692zM8 12.292c0-.975.001-1.627.056-2.131.051-.48.143-.734.27-.929L6.654 8.137c-.362.554-.515 1.15-.586 1.81C5.999 10.583 6 11.36 6 12.292zm2.2-6.416c-.853.373-1.566.682-2.122 1-.576.328-1.062.707-1.425 1.26l1.674 1.096c.127-.194.323-.38.743-.62.44-.251 1.037-.513 1.93-.903z"
+                ></path>
+                <path
+                  d="M3.346 16.047l-.827.562.827-.563zm1.299.844l-.178.984zM9.334 3.6l-.4-.917zm1.457-.534l.104.994zm2.116 1.385l-.954.302zM3.49 6.684l.837.548zM7 5.71l1.4-.61-.8-1.834-1.4.611zm1.4-.61l1.334-.583-.8-1.833-1.334.582.8 1.833zM4 13.075v-.894H2v.894zm0-.894v-1.89H2v1.89zm-2 .894c0 .801-.001 1.47.047 2 .049.532.156 1.068.472 1.533l1.654-1.125c-.03-.043-.096-.172-.134-.59-.038-.417-.039-.978-.039-1.818zm5.094 2.01c-.768.341-1.281.569-1.679.703-.396.135-.54.127-.593.118l-.355 1.968c.553.1 1.086-.02 1.591-.192.504-.17 1.116-.444 1.848-.77zM2.519 16.61a3 3 0 0 0 1.948 1.266l.355-1.968a1 1 0 0 1-.65-.422L2.52 16.608zM9.734 4.516c.392-.17.654-.285.857-.362a1.43 1.43 0 0 1 .304-.094l-.209-1.989c-.283.03-.551.116-.808.214s-.57.235-.944.398zM14 6c0-.408 0-.75-.013-1.025a3.225 3.225 0 0 0-.127-.826l-1.907.604c.008.023.026.1.037.317.01.216.01.502.01.93zm-3.105-1.94a1 1 0 0 1 1.058.693l1.907-.604a3 3 0 0 0-3.174-2.078l.21 1.99zM6.2 3.876c-.853.373-1.566.682-2.122 1-.576.328-1.062.707-1.425 1.26l1.674 1.096c.127-.194.323-.38.743-.62C5.51 6.361 6.107 6.1 7 5.71l-.8-1.833zM4 10.292c0-.975.001-1.627.056-2.131.051-.48.143-.734.27-.929L2.654 6.137c-.362.554-.515 1.15-.586 1.81C1.999 8.583 2 9.36 2 10.292zm8.067 10.422l.467-.884zm-.316-.206l-.624.78zm8.759-3.192l-.837-.548.837.547zm-.087-9.666l-.711.702.712-.702zm-.705-.462l.36-.933zm-8.228 3.497l.837.547zm8.51.77v2.253h2v-2.253zm-3 6.836l-1.067.465.8 1.834 1.067-.466zm-2-8.582l1.4-.61-.8-1.834-1.4.611zm-3 6.473v-1.89h-2v1.89zm3.933 2.575c-1.166.508-1.946.846-2.541 1.016-.583.166-.771.102-.858.057L11.6 21.6c.764.402 1.57.315 2.338.096.756-.215 1.683-.622 2.794-1.106l-.8-1.834zM10 16.181c0 1.212-.002 2.224.103 3.003.107.79.35 1.564 1.024 2.104l1.249-1.563c-.077-.06-.21-.208-.291-.809-.083-.613-.085-1.464-.085-2.735zm2.534 3.648a1 1 0 0 1-.158-.104l-1.249 1.563a3 3 0 0 0 .474.31l.933-1.77zM20 13.708c0 .975-.001 1.627-.055 2.131-.052.48-.144.734-.272.929l1.674 1.095c.362-.554.515-1.15.586-1.81.068-.636.067-1.413.067-2.345zm-2.2 6.416c.853-.373 1.566-.682 2.122-1 .576-.328 1.062-.707 1.425-1.26l-1.674-1.096c-.127.194-.323.38-.742.62-.441.251-1.038.513-1.931.903zm4.2-8.669c0-1.048.002-1.924-.079-2.606-.081-.689-.264-1.373-.786-1.901l-1.423 1.404c.055.056.16.2.223.732.063.537.065 1.272.065 2.371zm-5.6-2.357c1.008-.44 1.682-.732 2.2-.888.511-.155.686-.117.76-.088l.717-1.867c-.693-.267-1.393-.16-2.057.04-.657.2-1.46.551-2.42.97zm4.735-2.15a3 3 0 0 0-1.058-.693l-.718 1.867a1 1 0 0 1 .353.23zm-6.935.928c-.853.373-1.566.682-2.122 1-.576.328-1.062.707-1.425 1.26l1.674 1.096c.127-.194.323-.38.742-.62.441-.251 1.038-.513 1.931-.903zM12 14.292c0-.975.001-1.627.056-2.131.051-.48.143-.734.27-.929l-1.673-1.095c-.362.554-.515 1.15-.586 1.81-.068.636-.067 1.413-.067 2.345z"
+                ></path>
+              </g>
+            </svg>
+            <div>Similar</div>
           </button></a
         >
+      </div>
+      <div class="mobile-buy-now" (click)="copyLink()">
+        <a
+          ><button class="buy-now">
+            <svg
+              data-src="https://api.macosicons.com/uploads/share_24px_37664c5633.svg"
+              id="share"
+              class="icon-image icon-image-24"
+              fill="none"
+              height="24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+              data-attributes-set="fill,height,width,xmlns"
+              data-rendered="true"
+            >
+              <path
+                d="M8 9H7c-.943 0-1.414 0-1.707.293S5 10.057 5 11v8c0 .943 0 1.414.293 1.707S6.057 21 7 21h10c.943 0 1.414 0 1.707-.293S19 19.943 19 19v-8c0-.943 0-1.414-.293-1.707S17.943 9 17 9h-1m-4 5V3m0 0l2.5 2.5M12 3L9.5 5.5"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              ></path>
+            </svg>
+            <div>Share</div>
+          </button>
+        </a>
       </div>
     </div>
   </div>
+  <div *ngIf="similarDiscsActive" class="">
+    <div *ngFor="let discs of similarResponse; let i = index">
+      <span>{{ discs?.brand }} {{ discs?.name }}</span>
+      <span style="float: right"
+        >({{ i + 1 }} of {{ similarResponse.length }})</span
+      >
+    </div>
+  </div>
+
   <div class="top">
     <div
+      *ngIf="!similarDiscsActive"
       class="search-bar"
+      id="search-bar"
       [ngClass]="{
         redBorder: errorTruth == true
       }"
     >
       <button (click)="search()" class="search-button" id="simple-search">
-        <span class="material-symbols-outlined search-icon"> search </span>
+        <svg
+          data-src="https://api.macosicons.com/uploads/search_24px_9bbd46090f.svg"
+          id="search"
+          class="icon-image icon-image-24 search-icon"
+          fill="none"
+          height="24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+          data-attributes-set="fill,height,width,xmlns"
+          data-rendered="true"
+        >
+          <g stroke="currentColor" stroke-linecap="round" stroke-width="2">
+            <circle cx="9.375" cy="9.375" r="6.375"></circle>
+            <path d="M14.333 14.333L20 20"></path>
+          </g>
+        </svg>
       </button>
       <input
         class="search-input"
+        id="search-input"
         type="text"
         placeholder="Find a disc..."
         [(ngModel)]="discName"
         (keydown.enter)="search()"
         (keydown.enter)="hideKeyboard()"
       />
+      <button class="clear-button" (click)="clearField()">
+        <svg
+          data-src="https://api.macosicons.com/uploads/close_24px_e1b66cf0cc.svg"
+          id="close"
+          class="icon-image icon-image-24"
+          width="24"
+          height="24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          data-attributes-set="width,height,fill,xmlns"
+          data-rendered="true"
+        >
+          <path
+            d="M5 5l14 14m0-14L5 19"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></path>
+        </svg>
+      </button>
+    </div>
+
+    <div *ngIf="similarDiscsActive" class="search-bar">
+      <span>{{ response?.brand }} {{ response?.name }}</span>
+      <span style="float: right">({{ similarResponse.length }})</span>
     </div>
   </div>
 </div>
