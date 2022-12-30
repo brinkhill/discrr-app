@@ -259,14 +259,14 @@
   }
   .search-input::placeholder {
     color: #8899a6;
-    font-weight: 600;
+    font-weight: 500;
   }
   .search-button {
     background-color: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: inherit;
+    /* font-family: inherit; */
     border: none;
     font-size: 15px;
     cursor: pointer;
@@ -276,7 +276,7 @@
     background: transparent;
     font-size: 16px;
     border: none;
-    font-weight: 600;
+    font-weight: 500;
     height: 80%;
     border-radius: 8px;
     color: #ffffff;
