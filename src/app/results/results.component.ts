@@ -1,8 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, Input } from '@angular/core';
 
-import { ApiService } from '../api.service';
-
 @Component({
   selector: 'app-results',
   templateUrl: './results.component.html',

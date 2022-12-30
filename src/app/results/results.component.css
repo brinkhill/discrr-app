@@ -259,6 +259,7 @@
   }
   .search-input::placeholder {
     color: #8899a6;
+    font-weight: 600;
   }
   .search-button {
     background-color: transparent;
@@ -275,6 +276,7 @@
     background: transparent;
     font-size: 16px;
     border: none;
+    font-weight: 600;
     height: 80%;
     border-radius: 8px;
     color: #ffffff;
