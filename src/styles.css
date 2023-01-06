@@ -4,16 +4,14 @@ body {
   font-family: "Roboto", sans-serif;
   background-color: #15202b;
   color: #ffffff;
-  overflow: hidden;
+
   margin: 0;
-  overflow: hidden;
   width: 100%;
 }
 
 @media (max-width: 479px) {
   body {
-    margin: 0;
+    min-height: 100svh;
     overflow: hidden;
-    width: 100%;
   }
 }

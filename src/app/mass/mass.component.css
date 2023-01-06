@@ -215,11 +215,7 @@
   height: 4vh;
   color: #58a6ff;
 }
-.main-results {
-  width: 40%;
-  margin-left: 9.4px;
-  height: 74vh;
-}
+
 @media (min-width: 1080px) {
   .main-results {
     display: none;
@@ -451,6 +447,6 @@
   .main-results {
     width: 95%;
     margin-left: 9.4px;
-    height: 74vh;
+    height: 84svh;
   }
 }
