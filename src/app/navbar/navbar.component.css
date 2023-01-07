@@ -53,6 +53,8 @@ span {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    height: 100%;
   }
   span {
     font-size: 30px;
@@ -62,6 +64,7 @@ span {
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100%;
   }
 
   .search-button {
@@ -69,18 +72,21 @@ span {
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100%;
   }
   .profile-button {
     width: 20vw;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100%;
   }
   .settings-button {
     width: 20vw;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100%;
   }
   a {
     color: #ffff;

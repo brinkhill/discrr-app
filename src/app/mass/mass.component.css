@@ -216,7 +216,7 @@
   color: #58a6ff;
 }
 
-@media (min-width: 1080px) {
+@media (min-width: 800px) {
   .main-results {
     display: none;
   }
@@ -290,9 +290,7 @@
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
       rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
   }
-  .three {
-    height: 15%;
-  }
+
   .fav {
     float: right;
     padding: 10px;
